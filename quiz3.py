@@ -17,19 +17,9 @@
 def Grade(grades):           
     l1=[]
     for i in grades:
-        if i>=38:
-            t=i//5
-            if (t*5)-i!=0:
-                if ((t+1)*5)-i <3:
-    #                 print(t)
-                    l1.append(((t+1)*5))
-                else:
-    #                 print(i)
-                    l1.append(i)
-            else:
-                l1.append(i)
-        else:
-            l1.append(i)
+        if i>=38 and i%5>=3:
+            i = i+(5-(i%5))
+        l1.append(i)
         
     print(l1)
 
