@@ -13,7 +13,6 @@
 
 
 def minTime(l,d,o):
-    temp=0
     for i in range(o):
         for j in range(len(l)):
             if l[j]%d==0:
